@@ -1,0 +1,85 @@
+body {
+    margin: 0px;
+}
+nav {
+    display: block;
+    background-color: #336b87;
+    font-weight: bold;
+    color: #F98866;
+    text-shadow:
+    -1px -1px 0 #FFF,
+    1px -1px 0 #FFF,
+    -1px 1px 0 #FFF,
+    1px 1px 0 #FFF;
+    padding: 10px;
+    position: relative;
+    clear: both;
+    overflow: auto;
+}
+
+nav .logo {
+    font-family: Arial;
+    font-size: 30px;
+}
+
+nav .search {
+    position: relative;
+    float: right;
+    margin-top: -33px;
+}
+
+nav .search input, nav .search select {
+    font-family: Arial;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #FFF;
+    background-color: #FFF;
+}
+
+#listing {
+    max-width: 900px;
+    display: block;
+    margin: 0 auto;
+}
+
+#listing li {
+    list-style: none;
+    background-color: #2a3132; 
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 3px;
+}
+
+#listing li:hover {
+    cursor: pointer;
+}
+
+#listing li img {
+    display: inline-block;
+    width: 30%;
+    max-width: 300px;
+}
+
+#listing li .info {
+    display:inline-block;
+    width: 65%;
+    vertical-align: top;
+    font-family: Arial;
+    color: #FFF;
+}
+
+#listing li .info .author, #listing li .info .date {
+    font-style: italic;
+    font-size: 13px;
+}
+
+#listing li .info h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+#listing li .info a {
+    color: #CCC;
+}

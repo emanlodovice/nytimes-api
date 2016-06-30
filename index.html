@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            MOVIE HUNTER
+        </title>
+        <link rel="stylesheet" href="/assets/css/app.css">
+    </head>
+    <body>
+        <nav>
+            <div class="logo">MOVIE x ARTICLE HUNTER</div>
+            <div class="search">
+                <form id="search-form">
+                    <select name="source">
+                        <option value="movie">Movie</option>
+                        <option value="article">Article</option>
+                    </select>
+                    <input type="search" name="title"/>
+                </form>
+            </div>
+        </nav>
+        <div class="main-content">
+            <div id="listing">
+                <ul>
+
+                </ul>
+            </div>
+        </div>
+        <script id="list-movie-template" type="x-tmpl-mustache">
+            <li>
+                <img src="{{# multimedia.src}}{{ multimedia.src }}{{/ multimedia.src }}{{^ multimedia.src }}https://i.ytimg.com/vi/z042kUe0nKE/maxresdefault.jpg{{/ multimedia.src }}" alt="not available">
+                <div class="info">
+                    <h4 class="title">{{ display_title }}</h4>
+                    <p class="date">{{ publication_date }}</p>
+                    <p class="author">by {{ byline }}</p>
+                    <p class="summary">{{ summary_short }}</p>
+                    <a href="{{ link.url }}">Read More</a>
+                </div>
+            </li>
+        </script>
+        <script id="list-article-template" type="x-tmpl-mustache">
+            <li>
+                <img src="https://static01.nyt.com/{{ img }}" alt="">
+                <div class="info">
+                    <h4 class="title">{{ headline.main }}</h4>
+                    <p class="date">{{ pub_date }}</p>
+                    <p class="author">{{ byline.original }}</p>
+                    <p class="summary">{{ lead_paragraph }}</p>
+                    <a href="{{ web_url }}">Read More</a>
+                </div>
+            </li>
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="/assets/js/mustache.min.js"></script>
+        <script src="/assets/js/app.js"></script>
+    </body>
+</html>
